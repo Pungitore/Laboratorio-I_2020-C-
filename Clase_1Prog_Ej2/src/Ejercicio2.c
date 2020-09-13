@@ -5,11 +5,6 @@
  Version     :
  Copyright   : Your copyright notice
  Description : Ejercicio 2
- 1. Ingresar edad (valor entero), el sexo (F o M), y el legajo de 5 personas. Indicar:
-a) Edad promedio.
-b) Cantidad de mujeres
-c) Cantidad de hombres
-d)  Edad maxima y minima
 2. Al ejercicio anterior agregar:
 e) Desestimar el punto b
 f) El legajo del hombre mas viejo.
@@ -34,12 +29,13 @@ int main(void) {
 		int edadMaxima;
 		int edadMinima;
 		int contadorHombres;
-		int contadorMujeres;
 
+		int legajoHombreMasViejo;
+		int legajoMujerMasJoven;
 
 		contadorHombres = 0;
-		contadorMujeres = 0;
 		acumuladorEdad = 0;
+
 
 		    for(i = 0; i<5; i++){
 
@@ -65,11 +61,22 @@ int main(void) {
 		         {
 		        	 edadMaxima = edad;
 		         }
-
 		         if (i==0 || edad < edadMinima)
 		         {
 		            edadMinima = edad;
 		          }
+
+
+		        	 if ( sexo == 'm' && edad == edadMaxima)
+		        	   {
+		        	     legajoHombreMasViejo = legajo;
+		              }
+
+		        	 if (sexo == 'f' && edad == edadMinima)
+		        	   {
+		        		 legajoMujerMasJoven = legajo;
+		        	   }
+
 
 		        if(sexo == 'm'){
 		        	contadorHombres++;
@@ -81,9 +88,12 @@ int main(void) {
 
 		    printf("\nEl promedio de las edades son: %.1f" , promedioEdad);
 		    printf("\nCantidad de Hombres: %d" , contadorHombres);
-		    printf("\nCantidad de Mujeres: %d" , contadorMujeres);
 		    printf("\nEdad Maxima: %d" , edadMaxima);
 		    printf("\nEdad Minima: %d" , edadMinima);
+		    printf("\nLegajo del hombre mas viejo: %d" , legajoHombreMasViejo);
+		    printf("\nLegajo de la mujer mas joven: %d" , legajoMujerMasJoven);
+
+
 
 
 
