@@ -15,43 +15,43 @@
 int main(void) {
 	setbuf(stdout,NULL);
 
-		char nombre[20];
-	    char apellido[20];
-	    char apellidoYNombre[41];
-	    int lenApellidoYNombre;
-	    int i;
 
-	    //opcion 1 char apellidoYNombre[41];
-	   	//strcpy(apellidoNombre,apellido);
-	    //opcion 2 char apellidoYNombre[41];
-	    //strcpy(apellidoNombre,apellido)
+	char nombre[20];
+    char apellido[20];
+    char apellidoYNombre[41];
+    int lenApellidoYNombre;
+    int i;
 
-	    printf("Ingrese Nombre: ");
-	    fflush(stdin);
-	    gets(nombre);
+    //opcion 1 char apellidoYNombre[41];
+   	//strcpy(apellidoNombre,apellido);
+    //opcion 2 char apellidoYNombre[41];
+    //strcpy(apellidoNombre,apellido)
 
-	    printf("Ingrese Apellido: ");
-	    fflush(stdin);
-	    gets(apellido);
+    printf("Ingrese Nombre: ");
+    fflush(stdin);
+    gets(nombre);
+
+    printf("Ingrese Apellido: ");
+    fflush(stdin);
+    gets(apellido);
 
 
-	    //Concatenados Apellido, Nombre
-	    strcpy(apellidoYNombre,apellido);
-	    strcat(apellidoYNombre,", ");
-	    strcat(apellidoYNombre,nombre);
+    //Concatenados Apellido, Nombre
+    strcpy(apellidoYNombre,apellido);
+    strcat(apellidoYNombre,", ");
+    strcat(apellidoYNombre,nombre);
 
-	    lenApellidoYNombre = strlen(apellidoYNombre);
-	    apellidoYNombre[0] = toupper(apellidoYNombre[0]);
+    lenApellidoYNombre = strlen(apellidoYNombre);
+    apellidoYNombre[0] = toupper(apellidoYNombre[0]);
 
-	    for(i=0; i<lenApellidoYNombre;i++){
-	    	if(isspace(apellidoYNombre[i]))
-	    		{
-	    	   apellidoYNombre[i+1] = toupper(apellidoYNombre[i+1]);
-	    	    }
-	    }
+    for(i=0; i<lenApellidoYNombre;i++){
+    	if(isspace(apellidoYNombre[i]))
+    		{
+    	   apellidoYNombre[i+1] = toupper(apellidoYNombre[i+1]);
+    	    }
+    }
 
-	    puts(apellidoYNombre);
-
+    puts(apellidoYNombre);
 
 
 

@@ -43,8 +43,6 @@ int main(void) {
 	    int edadMenor;
 	    int cantidadEdadMayor;
 	    int cantidadEdadMenor;
-	    int indiceMayor;
-	    int indiceMenor;
 	    float promedio;
 	    int cantidadCargados;
 	    int cantidadVacios;
@@ -70,9 +68,9 @@ int main(void) {
 	    cantidadEdadMayor = sacarRepetidos(arrayEdades,CANTIDAD_EDADES,edadMayor);
 	    cantidadEdadMenor = sacarRepetidos(arrayEdades,CANTIDAD_EDADES,edadMenor);
 	    promedio = sacarPromedio(arrayEdades,CANTIDAD_EDADES);
-	     cantidadCargados = cantidadElementosCargados(arrayEdades,CANTIDAD_EDADES);
+	    cantidadCargados = cantidadElementosCargados(arrayEdades,CANTIDAD_EDADES);
 	    cantidadVacios = cantidadElementosVacios(arrayEdades,CANTIDAD_EDADES);
-	   // promedioEdadCargadas = promedioEdadesCargadas(arrayEdades,CANTIDAD_EDADES);
+	    promedioEdadCargadas = promedioEdadesCargadas(arrayEdades,CANTIDAD_EDADES);
 
 	    printf("\nLa suma de las edades es: %d",sumaEdades);
 	    printf("\nLa edad Mayor es: %d",edadMayor);
@@ -85,12 +83,6 @@ int main(void) {
 	    printf("\nLa cantidad de elementos cargados son: %d", cantidadCargados);
 	    printf("\nLa cantidad de elementos vacios son: %d", cantidadVacios);
 	    printf("\nEl promedio de edades cargadas es: %.1f",promedioEdadCargadas);
-
-	    int i;
-
-	    for(i=0; i<CANTIDAD_EDADES;i++){
-	    	printf("\nEdad |%d|: %d",i,arrayEdades[i]);
-	    }
 
 	return EXIT_SUCCESS;
 }

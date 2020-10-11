@@ -146,16 +146,14 @@ float promedioEdadesCargadas(int pArray[], int cantidadElementos){
 	    return retornoPromedio;
 }
 
-int indiceElementosVacios(int pArray[], int cantidadElementos){
+void indiceElementosVacios(int pArray[], int cantidadElementos){
 	int i;
-	int retornoIndiceVacio;
 
-	for(i=0; i<cantidadElementos; i++){
-	       if(pArray[i] == -1){
-	    	 retornoIndiceVacio = i;
-	        break;
-	       }
-	 }
-	return retornoIndiceVacio;
+	printf("Indice de datos vacios: \n");
+		for(i=0; i<cantidadElementos;i++){
+			if(pArray[i] =! -1){
+				printf("|%d|\n" , i);
+			}
+		}
 }
 
